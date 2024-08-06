@@ -186,25 +186,28 @@ class Home(QWidget):
                     break
         first = ""
         second = ""
+        realsecond = ""
         for a in text:
             if a.isnumeric():
-                first+= a
+                first += a
             else:
                 break
         for a in reversed(text):
                 if a.isnumeric():
-                    second+= a
+                    second += a
                 else:
                     break
+        for a in reversed(second):
+            realsecond+= a
         match currsymb:
                     case "×":
-                        self.output_box.setText(str(int(first) * int(second)))
+                        self.output_box.setText(str(int((int(first) * int(realsecond)))))
                     case "+":
-                        self.output_box.setText(str(int(first) + int(second)))
+                        self.output_box.setText(str(int((int(first) + int(realsecond)))))
                     case "-":
-                        self.output_box.setText(str(int(first) - int(second)))
+                        self.output_box.setText(str(int((int(first) - int(realsecond)))))
                     case "÷":
-                        self.output_box.setText(str(int((int(first) / int(second)))))
+                        self.output_box.setText(str(int((int(first) / int(realsecond)))))
                 
 
 if __name__ in "__main__":
