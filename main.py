@@ -1,9 +1,6 @@
-from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import *
-from PyQt5.QtGui import *
+from PyQt5.QtWidgets import QLineEdit, QPushButton, QVBoxLayout, QWidget, QHBoxLayout, QApplication
+from PyQt5.QtGui import QFontDatabase
 from PyQt5 import QtCore
-
-from googletrans import Translator
 
 class Home(QWidget):
     def __init__(self):
